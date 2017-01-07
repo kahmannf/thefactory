@@ -1,17 +1,8 @@
 function loadItems(){
-  var finished = false;
   $.getJSON("json/items.json", function (data){
     items =data;
-    finished = true;
+    InitRemuse2();
   });
-
-  var operationvar = 0;
-
-  while(!finished)
-  {
-    operationvar = operationvar + 1;
-  }
-  console.log(operationvar);
 }
 
 var items;

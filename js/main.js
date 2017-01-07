@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 	loadItems();
+}
 
+function InitRemuse2(){
 	//todo: check for possibilities of loading a save game ffrom cokkies
 	//ELSE initializte default game
 
