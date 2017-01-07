@@ -1,0 +1,81 @@
+.hidden{
+	display: none;
+}
+
+.item-junk{
+	background-color: rgba(150,150,150,1);
+}
+
+.item-common{
+	background-color: rgba(210,210,210,1);
+	color: black;
+}
+
+.item-uncommon{
+	background-color: rgba(50,210,50,1);
+	color: black;
+}
+
+.item-rare{
+	background-color: rgba(50,50,210,1);
+}
+
+.item-epic{
+	background-color: rgba(210,50,210,1);
+	color: black;
+}
+
+.item-legendary{
+	background-color: rgba(255,150,30,1);
+	color: black;
+}
+
+.item-unobtainable{
+	background-color: rgba(255,255,255,1);
+	color: black;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

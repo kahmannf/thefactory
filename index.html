@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		
+		
+		<meta charset="utf-8" />
+		<title>Title</title>
+	</head>
+	<body onload='Init();'>
+		
+		<script src="js/main.js"></script>
+		<script src="js/inventory.js"></script>
+		<script src="js/factory.js"></script>
+		<script src="js/dragdrop.js"></script>
+		
+		
+		<script src="js/debug.js"></script>
+		
+		<!-- Header Menu -->
+		<div class="menu-header">
+			<div id="factoryButton" class="menu-button"  onclick='menubuttonclick(this, "factorydiv"); displayMaschineInventory(); displayFactoryComplete();'>
+				Factory
+			</div>
+			<div class="menu-button menu-button-longword" onclick='menubuttonclick(this, "resourcediv");displayResourceInventory();'>
+				Resource-monitor
+			</div>
+			<div class="menu-button" onclick='menubuttonclick(this, "settingsdiv")'>
+				Settings
+			</div>
+			<div id="devmenubutton" class="menu-button hidden" onclick='menubuttonclick(this, "devdiv")'>
+				Dev
+			</div>
+		</div>
+		<div id="gameroot" class="gameroot">
+			<!-- FACTORY --------------------------------------------------------->
+			<div id="factorydiv" class="factorydiv hidden">
+				<div id="maschineinventory" class="machineinventory">
+				</div>
+				<div id="factorygrid" class="factory-grid">
+				
+				</div>
+			</div>
+			
+			<!-- RESOURCE-MONITOR ------------------------------------------------>
+			<div id="resourcediv" class="hidden">
+				<div id="inventoryHeader">
+				</div>
+				<div id="inventory" class="inventory">
+					
+				</div>
+			</div>
+			
+			<!-- SETTINGS -------------------------------------------------------->
+			<div id="settingsdiv" class="hidden">
+				<div class="settings-column">
+					<div class="settings-row">
+						Save
+					</div>
+					<div class="settings-row">
+						Load
+					</div>
+					<div class="settings-row">
+						Debugmode
+					</div>
+				</div>
+				<div class="settings-column">
+					<div class="settings-row">
+						<button onclick="loadexportcodeintotextbox()">Export</button>
+					</div>
+					<div class="settings-row">
+						<button onclick="loadimportcode()">Import</button>
+					</div>
+					<div class="settings-row">
+						<button id="buttondevmode" onclick="devmode()">Activate</button>
+					</div>
+				</div>
+				<div class="settings-column" style="width:400px;">
+					<textarea class="large-textbox" id="exportcodetextbox" readonly="true">
+			
+					</textarea>
+				</div>
+			</div>
+			
+			<!-- DEBUG/DEV/CHEATING ---------------------------------------------->
+			<div id="devdiv" class="hidden">
+				<div class="settings-column">
+					<div class ="settings-row">
+						<button onclick="addmaschinedummys()">AddMaschineDummys</button>
+					</div>
+					<div class ="settings-row">
+						<button onclick="clearMaschineInventory()">clear maschine inv</button>
+					</div>
+					<div class ="settings-row">
+						<button onclick="addSand(1000)">Add 1000 Sand</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
