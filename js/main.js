@@ -1,11 +1,10 @@
-function Init(){
-	menubuttonclick(document.getElementById("factoryButton"), "factorydiv"); 
-	devmode("silent");
-	displayFactoryComplete();
-	
+document.addEventListener('DOMContentLoaded', function() {
+
+	loadItems();
+
 	//todo: check for possibilities of loading a save game ffrom cokkies
 	//ELSE initializte default game
-	
+
 	if(!true)
 	{
 		//load savegame here later
@@ -14,8 +13,13 @@ function Init(){
 	{
 		addMaschineInventoryBaseItems();
 	}
-}
 
+	menubuttonclick(document.getElementById("factoryButton"), "factorydiv");
+	devmode("silent");
+	displayFactoryComplete();
+
+
+}, false);
 
 function devmode(){
 	try
@@ -81,12 +85,12 @@ function menubuttonclick(sender, divname){
 	}
 	sender.classList.add("menu-button-clicked");
 	selectedTabButton = sender;
-	
+
 	if(selectedTab != null)
 	{
 		selectedTab.classList.add("hidden");
 	}
-	
+
 	var newtab = document.getElementById(divname);
 	newtab.classList.remove("hidden");
 	selectedTab = newtab
@@ -108,7 +112,7 @@ function loadimportcode(){
 
 function getMaschineHtmlDiv(m, isininventory){
 	var html = "";
-	
+
 	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="true" ondrag="';
 	if(isininventory)
 	{
@@ -124,7 +128,6 @@ function getMaschineHtmlDiv(m, isininventory){
 	html += '<img draggable="false" src="' + m.imglink + '" ></img>';
 	html += '<div>' + m.amount + '</div>';
 	html += "</div>";
-	
+
 	return html;
 }
-

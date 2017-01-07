@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		
+
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/base.css">
-		
-		
+
+
 		<meta charset="utf-8" />
 		<title>Title</title>
 	</head>
-	<body onload='Init();'>
-		
-		<script src="js/main.js"></script>
-		<script src="js/inventory.js"></script>
-		<script src="js/factory.js"></script>
-		<script src="js/dragdrop.js"></script>
-		
-		
-		<script src="js/debug.js"></script>
-		
+	<body>
+
+		<script type="text/javascript" src="jQuery/jquery-3.1.1.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/inventory.js"></script>
+		<script type="text/javascript" src="js/factory.js"></script>
+		<script type="text/javascript" src="js/dragdrop.js"></script>
+		<script type="text/javascript" src="js/objecthandling.js"></script>
+
+
+		<script type="text/javascript" src="js/debug.js"></script>
+
+		<!-- json data   -->
+		<script type="application/json" src="json/items.json" id="jsonitems"></script>
+
+		</script>>
+
 		<!-- Header Menu -->
 		<div class="menu-header">
 			<div id="factoryButton" class="menu-button"  onclick='menubuttonclick(this, "factorydiv"); displayMaschineInventory(); displayFactoryComplete();'>
@@ -40,19 +48,19 @@
 				<div id="maschineinventory" class="machineinventory">
 				</div>
 				<div id="factorygrid" class="factory-grid">
-				
+
 				</div>
 			</div>
-			
+
 			<!-- RESOURCE-MONITOR ------------------------------------------------>
 			<div id="resourcediv" class="hidden">
 				<div id="inventoryHeader">
 				</div>
 				<div id="inventory" class="inventory">
-					
+
 				</div>
 			</div>
-			
+
 			<!-- SETTINGS -------------------------------------------------------->
 			<div id="settingsdiv" class="hidden">
 				<div class="settings-column">
@@ -79,11 +87,11 @@
 				</div>
 				<div class="settings-column" style="width:400px;">
 					<textarea class="large-textbox" id="exportcodetextbox" readonly="true">
-			
+
 					</textarea>
 				</div>
 			</div>
-			
+
 			<!-- DEBUG/DEV/CHEATING ---------------------------------------------->
 			<div id="devdiv" class="hidden">
 				<div class="settings-column">

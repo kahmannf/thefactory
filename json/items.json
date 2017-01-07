@@ -8,8 +8,24 @@
     "amount": 0,
     "tooltip": "Plain sand. Nothing more, nothing less. May contain nuts."
   },
-  "2": {
-    
+
+
+  "1000": {
+		"name":"Factory Gate",
+		"price": -1,
+		"rarity": "item-unobtainable",
+		"imglink": "img/warehousegate160x160.jpg",
+		"amount": 1,
+		"tooltip": "The gate to your factory. Resources will arrive here and will be pushed into all Directions."
+  },
+
+  "1001": {
+		"name":"Resource Hopper",
+		"price": 500,
+		"rarity": "item-common",
+		"imglink": "img/hopper200x200.png",
+		"amount": 1,
+		"tooltip": "Items that are pushed into this block will be transported into your warehouse."
   }
 
 }
