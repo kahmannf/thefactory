@@ -1,7 +1,7 @@
 function loadItems(){
 
   var scripttag = $("#jsonitems");
-  var jsonstring = scripttag.html();
+  var jsonstring = scripttag.innerHTML;
   items = JSON.parse(jsonstring);
 }
 

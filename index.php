@@ -23,7 +23,7 @@
 		<script type="text/javascript" src="js/debug.js"></script>
 
 		<!-- json data   -->
-		<script type="application/json" src="json/items.json" id="jsonitems"></script>
+		<script type="text/json" id="jsonitems"><?php include("json/items.json"); ?></script>
 
 		</script>>
 
