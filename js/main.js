@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 	loadItems();
-}
+}, false);
 
 function InitRemuse2(){
 	//todo: check for possibilities of loading a save game ffrom cokkies
@@ -21,7 +21,7 @@ function InitRemuse2(){
 	displayFactoryComplete();
 
 
-}, false);
+}
 
 function devmode(){
 	try
