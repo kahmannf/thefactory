@@ -12,5 +12,9 @@ function getItem(id, amount){
 
 function loadJSON(filename){
 
-  return $.getJSON(filename);
+  var result = null;
+  $.getJSON(filename, function (data){
+    console.log(data);
+  });
+  return result;
 }
