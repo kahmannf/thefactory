@@ -1,0 +1,15 @@
+{
+  "1": {
+    "id": 1,
+    "name":"Sand",
+    "price": 0,
+    "rarity": "item-junk",
+    "imglink": "img/sand200x200.png",
+    "amount": 0,
+    "tooltip": "Plain sand. Nothing more, nothing less. May contain nuts."
+  },
+  "2": {
+    
+  }
+
+}
