@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-
+	countJSONDocsToLoad = 1;
 	loadItems();
 }, false);
 
-function InitRemuse2(){
-	//todo: check for possibilities of loading a save game ffrom cokkies
+var countJSONDocsToLoad;
+
+function loadDocumentComplete(){
+	countJSONDocsToLoad -= 1;
+	if(countJSONDocsToLoad > 0)
+	{
+		return;
+	}
+	//todo: check for possibilities of loading savegame
 	//ELSE initializte default game
 
 	if(!true)

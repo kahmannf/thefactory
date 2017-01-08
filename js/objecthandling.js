@@ -1,7 +1,7 @@
 function loadItems(){
   $.getJSON("json/items.json", function (data){
     items =data;
-    InitRemuse2();
+    loadDocumentComplete();
   });
 }
 
