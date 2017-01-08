@@ -52,6 +52,11 @@ function displayFactoryComplete(){
 
 	var factoryGridElement = document.getElementById("factorygrid");
 
+	while(factoryGridElement.hasChildNodes())
+	{
+		factoryGridElement.removeChild(factoryGridElement.lastChild);
+	}
+
 	for(var x = 0; x < factoryHeight; x++)
 	{
 		var row = factoryRows[x];
