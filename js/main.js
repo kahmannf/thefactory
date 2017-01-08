@@ -134,6 +134,13 @@ function getMaschineHtmlDiv(m, isininventory){
 
 function GetDOMElementFromHTLMString(html){
 	var host = document.createElement('div');
-	host.outerHTML = html;
-	return host;
+	host.innerHTML = html;
+	if(host.childNodes.length == 1)
+	{
+		return host.firstChild;
+	}
+	else
+	{
+		throw "html string contains more than one element";
+	}
 }
