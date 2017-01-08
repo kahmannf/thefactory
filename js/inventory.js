@@ -47,16 +47,22 @@ function addMaschineArrayToInventory(maschinearray){
 function displayMaschineInventory(){
 	var displaydiv = document.getElementById("maschineinventory");
 
-	var html = "";
+	displaydiv.innerHTML = "";
 
 	for(var i = 0; i < maschineInventory.length; i++)
 	{
-		html += getMaschineHtmlDiv(maschineInventory[i], true);
+		var html += getMaschineHtmlDiv(maschineInventory[i], true);
+		var div = GetDOMElementFromHTLMString(html);
+		div.maschine = maschineInventory[i];
+		displaydiv.appendChild(div);
 	}
 
-	displaydiv.innerHTML = html;
 }
 
+function selectMaschineInInvenotry(div)
+{
+
+}
 
 function addResourceToInventory(resource){
 

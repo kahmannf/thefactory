@@ -122,7 +122,7 @@ function loadimportcode(){
 function getMaschineHtmlDiv(m, isininventory){
 	var html = "";
 
-	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="true" ondrag="';
+	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(sender)"';
 	if(isininventory)
 	{
 		html += "dragFactoryItemFromInventory(event)";
@@ -139,4 +139,17 @@ function getMaschineHtmlDiv(m, isininventory){
 	html += "</div>";
 
 	return html;
+}
+
+function GetDOMElementFromHTLMString(html){
+	var host = document.createElement('div');
+	host.innerHTML = html;
+	if(host.childNodes.count == 1)
+	{
+		return host.firstChild;
+	}
+	else
+	{
+		return host.childNodes;
+	}
 }
