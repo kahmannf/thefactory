@@ -122,16 +122,7 @@ function loadimportcode(){
 function getMaschineHtmlDiv(m, isininventory){
 	var html = "";
 
-	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(sender)"';
-	if(isininventory)
-	{
-		html += "dragFactoryItemFromInventory(event)";
-	}
-	else
-	{
-		html += "dragFactoryItemFromGrid(event)";
-	}
-	html += '">';
+	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(sender)">';
 	html += '<span class="tooltiptext">' + m.tooltip + '</span>';
 	html += '<div style="width:100%;">' + m.name + '</div>';
 	html += '<img draggable="false" src="' + m.imglink + '" ></img>';
