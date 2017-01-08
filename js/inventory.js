@@ -56,12 +56,19 @@ function displayMaschineInventory(){
 		div.maschine = maschineInventory[i];
 		displaydiv.appendChild(div);
 	}
-
 }
+
+var selectedMaschineDiv = null;
 
 function selectMaschineInInvenotry(div)
 {
+	if(selectedMaschineDiv != null)
+	{
+		selectedMaschineDiv.classList.remove("selected-item");
+	}
+	selectedMaschineDiv = div;
 
+	selectedMaschineDiv.classList.add("selected-item");
 }
 
 function addResourceToInventory(resource){
