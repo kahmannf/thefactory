@@ -11,6 +11,7 @@ function increaseFactoryWidth(){
 	{
 		factoryRows[y].push("empty");
 	}
+	factoryWidth += 1;
 	displayFactoryComplete();
 	return true;
 }
@@ -24,6 +25,8 @@ function increaseFactoryHeight(){
 	}
 
 	factoryRows.push(row);
+	factoryHeight += 1;
+	displayFactoryComplete();
 }
 
 var factoryRows = new Array();
