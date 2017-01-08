@@ -30,7 +30,7 @@ function displayFactoryComplete(){
 
 		var htmlString = '<div class="factory-row"></div>';
 
-		var factoryRowElement = GetDOMElementFromHTLMString((htmlString);
+		var factoryRowElement = GetDOMElementFromHTLMString((htmlString));
 
 		for(var y = 0; y < factoryWidth; y++)
 		{
