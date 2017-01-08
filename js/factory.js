@@ -44,5 +44,6 @@ function displayFactoryComplete(){
 				factoryRowElement.appendChild(GetDOMElementFromHTLMString(getMaschineHtmlDiv(m)));
 			}
 		}
+		factoryGridElement.appendChild(factoryRowElement);
 	}
 }
