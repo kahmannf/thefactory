@@ -134,13 +134,6 @@ function getMaschineHtmlDiv(m, isininventory){
 
 function GetDOMElementFromHTLMString(html){
 	var host = document.createElement('div');
-	host.innerHTML = html;
-	if(host.childNodes.count == 1)
-	{
-		return host.firstChild;
-	}
-	else
-	{
-		return host.childNodes;
-	}
+	host.outerHTML = html;
+	return host;
 }
