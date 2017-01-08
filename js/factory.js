@@ -1,6 +1,31 @@
 var factoryWidth = 5;
 var factoryHeight = 5;
 
+function increaseFactoryWidth(){
+	if(factoryWidth == 10)
+	{
+		return false;
+	}
+
+	for(var y = 0; y < factoryHeight;y++)
+	{
+		factoryRows[y].push("empty");
+	}
+	displayFactoryComplete();
+	return true;
+}
+
+function increaseFactoryHeight(){
+	var row = new Array();
+
+	for(var x; x < factoryWidth; x++)
+	{
+		row.push("empty");
+	}
+
+	factoryRows.push(row);
+}
+
 var factoryRows = new Array();
 
 InitBasFactory();
