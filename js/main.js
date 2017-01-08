@@ -122,7 +122,7 @@ function loadimportcode(){
 function getMaschineHtmlDiv(m, isininventory){
 	var html = "";
 
-	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(sender)">';
+	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(this)">';
 	html += '<span class="tooltiptext">' + m.tooltip + '</span>';
 	html += '<div style="width:100%;">' + m.name + '</div>';
 	html += '<img draggable="false" src="' + m.imglink + '" ></img>';
