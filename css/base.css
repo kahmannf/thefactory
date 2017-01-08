@@ -1,6 +1,7 @@
 .selected-item{
-	border-color: rgba(40,40,250,1);
+	border-color: rgba(100,100,250,1);
 	border-style: outset;
+	border-width: 2px;
 }
 
 .hidden{
