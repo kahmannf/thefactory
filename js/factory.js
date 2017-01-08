@@ -14,37 +14,35 @@ function InitBasFactory(){
 		{
 			row.push("empty");
 		}
-		
+
 		factoryRows.push(row);
 	}
 }
 
 
 function displayFactoryComplete(){
-	
-	var html = "";
-	
+
+	var factoryGridElement = document.getElementById("factorygrid");
+
 	for(var x = 0; x < factoryHeight; x++)
 	{
 		var row = factoryRows[x];
-		
-		html += '<div class="factory-row">';
-		
+
+		var htmlString = '<div class="factory-row"></div>';
+
+		var factoryRowElement = GetDOMElementFromHTLMString((htmlString);
+
 		for(var y = 0; y < factoryWidth; y++)
 		{
 			var m = row[y];
 			if(m === "empty")
 			{
-				html += '<div class="maschine-item"></div>';
+				factoryRowElement.appendChild(GetDOMElementFromHTLMString('<div class="maschine-item"></div>'));
 			}
 			else
 			{
-				html += getMaschineHtmlDiv(m, false);
+				factoryRowElement.appendChild(GetDOMElementFromHTLMString(getMaschineHtmlDiv(m)));
 			}
 		}
-		
-		html += '</div>';
 	}
-	
-	document.getElementById("factorygrid").innerHTML = html;
 }

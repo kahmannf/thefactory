@@ -119,7 +119,7 @@ function loadimportcode(){
 	throw "NotImplemented";
 }
 
-function getMaschineHtmlDiv(m, isininventory){
+function getMaschineHtmlDiv(m){
 	var html = "";
 
 	html += '<div class="' + m.rarity + ' maschine-item tooltip" draggable="false" onclick="selectMaschineInInvenotry(this)">';

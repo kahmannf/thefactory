@@ -51,7 +51,7 @@ function displayMaschineInventory(){
 
 	for(var i = 0; i < maschineInventory.length; i++)
 	{
-		var html = getMaschineHtmlDiv(maschineInventory[i], true);
+		var html = getMaschineHtmlDiv(maschineInventory[i]);
 		var div = GetDOMElementFromHTLMString(html);
 		div.maschine = maschineInventory[i];
 		displaydiv.appendChild(div);
