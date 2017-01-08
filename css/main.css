@@ -42,6 +42,7 @@ html, body {
 	text-align: center;
 	padding-top: 33px;
 	float: left;
+  cursor: pointer;
 }
 
 .menu-button-longword{
